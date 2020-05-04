@@ -6,7 +6,7 @@ import {Title} from './Components/Title'
 function App() {
   return (
     <div className="App">
-      <Title>Cosas</Title>
+      <Title>Cosas 1</Title>
     </div>
   );
 }
