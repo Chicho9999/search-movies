@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
 
+const API_KEY = '328e5db3';
 
 export class SearchForm extends Component {
+
+    state = { inputMovie: ''}
 
     _handleChange = (e) => {
         this.setState({inputMovie: e.target.value})
