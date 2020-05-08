@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types'
+import { BackHomeBtn } from '../pages/BackHomeBtn'
+
 const API_KEY = '328e5db3';
 
 export class Detail extends Component {
@@ -18,7 +20,6 @@ export class Detail extends Component {
         fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
         .then(res => res.json())
         .then(movie => {
-            debugger
             this.setState({movie})
         })
 
@@ -33,7 +34,7 @@ export class Detail extends Component {
         const {Title, Poster} = this.state.movie
         return(
             <div>
-                <button>Back</button>
+                <BackHomeBtn />
 
                 <h1>{Title}</h1>
                 <img src={Poster} alt=""/>
